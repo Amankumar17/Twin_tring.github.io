@@ -888,6 +888,7 @@ function scrollFunction() {
   }
 
     var slideIndex = 0;
+  var carotimer;
 showSlides(slideIndex);
 
 function currentSlide(n) {
@@ -895,6 +896,7 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+  clearTimeout(carotimer);
   var i;
   var slides = document.getElementsByClassName("mainSlider");
   var dots = document.getElementsByClassName("dot");
@@ -911,7 +913,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   //console.log(slideIndex);
   
-  setTimeout(showSlides, 4000); // Change image every 2 seconds
+  carotimer = setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 
 var leftIndex = 14;//total number of images

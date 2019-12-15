@@ -603,10 +603,6 @@ h5{
                     <img src="./images/slidesheet/5.jpg" alt="Image-5"> </div>
             <div class="mainSlider fade" href="#six!">
                     <img src="./images/gallery/6.jpg" alt="Image-6"> </div>
-            <div class="mainSlider fade" href="#eight!">
-                    <img src="./images/gallery/1.jpg" alt="Image-8"> </div>
-            <div class="mainSlider fade" href="#nine!">
-                    <img src="./images/gallery/2.jpg" alt="Image-9"> </div>
 
 
         <div class="dots col-12" style="text-align:center">
@@ -615,8 +611,6 @@ h5{
         <span class="dot" onclick="currentSlide(3)"></span> 
         <span class="dot" onclick="currentSlide(4)"></span> 
         <span class="dot" onclick="currentSlide(5)"></span> 
-        <span class="dot" onclick="currentSlide(6)"></span> 
-        <span class="dot" onclick="currentSlide(7)"></span>  
 </div>
 </div>
 <br>
@@ -887,17 +881,15 @@ function scrollFunction() {
   }
 
     var slideIndex = 0;
-  var carotimer;
+    var carotimer;
 showSlides(slideIndex);
 
 function currentSlide(n) {
-  clearTimeout(carotimer);
-  showSlides(slideIndex = n-1)
-  
+    clearTimeout(carotimer);
+    showSlides(slideIndex = n-1)
 }
 
 function showSlides(n) {
-  
   var i;
   var slides = document.getElementsByClassName("mainSlider");
   var dots = document.getElementsByClassName("dot");

@@ -892,11 +892,13 @@ function scrollFunction() {
 showSlides(slideIndex);
 
 function currentSlide(n) {
-    showSlides(slideIndex = n)
+  clearTimeout(carotimer);
+  showSlides(slideIndex = n)
+  
 }
 
 function showSlides(n) {
-  clearTimeout(carotimer);
+  
   var i;
   var slides = document.getElementsByClassName("mainSlider");
   var dots = document.getElementsByClassName("dot");
